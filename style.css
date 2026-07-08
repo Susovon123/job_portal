@@ -1,0 +1,130 @@
+
+@import "tailwindcss";
+@font-face {
+    font-family: "rye-regular";
+    src: url("./fonts/Rye/Rye-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Sansita-r";
+    src: url("./fonts/sansita-one/SansitaOne.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "poppins-r";
+    src: url("./fonts/Poppins/Poppins-SemiBoldItalic.ttf") format("truetype");
+} 
+@font-face {
+    font-family: "inter-r";
+    src: url("fonts/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+}
+
+.container{
+    max-width:1170px;
+    margin:0 auto;
+    padding:0 15px;
+}
+:root{
+    --rye-regular:"rye-regular" ;
+    --sansita-r:"Sansita-r";
+    --poppins-r:"poppins-r";
+    --inter-r:"inter-r";
+
+}
+
+.cmn-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cmn-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #111827;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.cmn-btn:hover::before {
+    transform: translateX(0);
+}
+
+.cmn-btn:hover {
+    color: #fff;
+} 
+.banner-image::after{
+    content: ""; 
+    position: absolute; 
+    z-index: -1; 
+    background-color: #58CDFF; 
+    border-radius: 100%;
+    width: 500px; 
+    height: 520px; 
+    top: 113px;
+    right: 0;
+}
+ 
+/* banner-overlay */ 
+.about-us-banner{
+    background-image: url(images/Group\ 65.png);
+    position: relative;
+}
+.about-us-banner::before{
+    position: absolute; 
+    background-color: #3E3E3E; 
+    opacity: 0.85;
+    width: 100%; 
+    height: 100%; 
+  inset: 0; 
+  z-index: 1;
+     content: "";
+
+}
+/* swiper slide */ 
+.swiper {
+  width: 100%;
+  height: 350px;
+ 
+  
+  
+}
+
+      .swiper-slide {
+        text-align: center;
+      
+      border: 1px solid transparent;
+    background:
+        linear-gradient(#3E3E3E, #3E3E3E) padding-box,
+        linear-gradient(to top, #58CDFF, #ffffff) border-box;
+       
+       border-radius: 10px;
+      }
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 90px;  
+ 
+} 
+.swiper-pagination-bullet {
+    background:#ffffff;
+    opacity: 1 ;
+}
+
+.swiper-pagination-bullet-active {
+    background: #58CDFF ;
+}
+
+@keyframes borderAnimation {
+    0%   { clip-path: inset(0 100% 0 0); }
+    34%  { clip-path: inset(0 0 100% 0); }
+    65%  { clip-path: inset(0 0 0 100%); }
+    100%  { clip-path: inset(100% 0 0 0); }
+    
+}
+
+.animate-border:hover:before{
+    animation: borderAnimation 5s linear infinite;
+}
