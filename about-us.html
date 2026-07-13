@@ -19,34 +19,73 @@
 </head>
 <body class="bg-[#3E3E3E]"> 
     <div class="about-us-banner relative min-h-[543px] bg-cover bg-no-repeat bg-center ">
-  <header class="absolute top-0 left-0 w-full z-10">
-        <div class="container">
-            <nav class="flex items-center justify-between mt-11">
-
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center ps-2 text-[#58CDFF] font-['rye-regular'] text-2xl no-underline">
+     <!-- Header -->
+   <header class="absolute inset-0 w-full z-10 ">
+    
+<nav >
+    <div class="container flex items-center justify-between">
+        
+            <!-- Logo -->
+             <a href="index.html" class="flex items-center gap-2 text-[#58CDFF] font-['rye-regular'] text-2xl">
                     <img src="images/Group 5.png" alt="Logo">
                     Job Portal
                 </a>
 
-                <!-- Navigation -->
-                <ul class="flex items-center  text-white text-base font-['poppins-r'] no-underline">
+              <!-- Navigation -->
+                <ul class="flex items-center  text-white text-base font-['poppins-r'] no-underline hidden lg:flex ">
                     <li><a href="index.html" class="hover:text-[#58CDFF]  me-12 no-underline">Home</a></li>
-                    <li><a href="#" class="hover:text-[#58CDFF] me-12 no-underline">Job List</a></li>
+                    <li><a href="job-list.html" class="hover:text-[#58CDFF] me-12 no-underline">Job List</a></li>
                     <li><a href="contact-us.html" class="hover:text-[#58CDFF] me-12 no-underline">Contact</a></li>
                     <li><a href="about-us.html" class="hover:text-[#58CDFF] me-12 no-underline ">Apply</a></li>
                 </ul>
-
-                <!-- Login Button -->
-                <a href="#" class="cmn-btn inline-block bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
+      <!-- Login Button -->
+            <a href="#" class="hidden lg:inline-block cmn-btn bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
                     Login
                 </a>
 
-            </nav>
-        </div>
-    </header>  
+            <!-- Mobile Toggle -->
+            <button id="menuBtn" class="lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+    </div>
+</nav>
+<div id="overlay"
+    class="fixed inset-0 bg-black/40 hidden z-40"></div>
+
+<!-- Mobile Sidebar -->
+<div id="mobileMenu"
+    class="fixed top-0 right-[-100%] w-72 min-h-screen bg-[#3E3E3E] shadow-xl transition-all duration-300 z-50">
+
+    <div class="flex justify-between items-center p-5 border-b">
+        <a href="index.html" class="flex items-center gap-2 text-[#58CDFF] font-['rye-regular'] text-2xl">
+                    <img src="images/Group 5.png" alt="Logo">
+                    Job Portal
+                </a>
+
+        <button id="closeBtn" class="text-3xl">&times;</button>
+    </div>
+
+<ul class="flex flex-col mt-8 items-center space-y-6 text-white text-base font-['poppins-r']">
+    <li><a href="index.html" class="hover:text-[#58CDFF] no-underline">Home</a></li>
+    <li><a href="job-list.html" class="hover:text-[#58CDFF] no-underline">Job List</a></li>
+    <li><a href="contact-us.html" class="hover:text-[#58CDFF] no-underline">Contact</a></li>
+    <li><a href="about-us.html" class="hover:text-[#58CDFF] no-underline">Apply</a></li>
+
+    <li class="pt-4">
+        <a href="#" class="cmn-btn inline-block bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
+            Login
+        </a>
+    </li>
+</ul>
+
+</div>
+   </header>
     <div class="absolute z-20 capitalize top-[138px] left-[403px]">
-  <h1 class="text-[#ffffff] font-['Sansita-r'] text-[60px]  font-normal mx-[54px]"> apply for job</h1> 
+  <h1 class="text-[#ffffff] font-['Sansita-r'] text-[60px]  font-normal mx-[54px] "> apply for job</h1> 
 <p class="text-center max-w-[530px] mx-auto text-white">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae mollitia velit similique? Natus, quisquam! Ullam beatae alias voluptatibus amet vel quasi libero.
 </p>
@@ -54,123 +93,155 @@
 </div>
 </div>
 <!-- apply for job -->
-    <section class="apply-for-job-form py-28">
-        <div class="container">
-            <div class="min-h-[934px] py-[68px] w-full px-[44px] shadow-[10px_10px_15px_10px_#000000] hover:shadow-[5px_5px_28px_1px_#58CDFF] cursor-pointer duration-1000 ">
-                <div class="grid grid-cols-2 flex ">
-                    <div >
-                        <form action="#" method="get" class="flex flex-col">
-                            <label for="username" class="text-[#ffffff] font-medium text-[20px] capitalize "> username</label>
-                            <input type="text" placeholder="enter your username" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] hover:shadow-[5px_5px_28px_1px_#58CDFF] cursor-pointer duration-1000" id="username" >
-                                <p id="u-msg"> </p>
-                        </form>
-                    </div>
-                     <div class="ps-[20px]">
-                        <form action="#" method="get" class="flex flex-col">
-                            <label for="email" class="text-[#ffffff] font-medium text-[20px] capitalize ">email</label>
-                            <input type="email" placeholder="example@gmail.com" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] font-normal hover:shadow-[5px_5px_28px_1px_#58CDFF] cursor-pointer duration-1000" id="email">
-                                <p id="e-msg"></p>
-                        </form>
-                    </div>
-                </div>
-                  <div class="grid grid-cols-2 flex mt-[42px] ">
-                    <div >
-                        <form action="#" method="get" class="flex flex-col">
-                            <label for="phone" class="text-[#ffffff] font-medium text-[20px] capitalize ">phone</label>
-                            <input type="text" placeholder="enter your phone number" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] font-normal hover:shadow-[5px_5px_28px_1px_#58CDFF] cursor-pointer duration-1000" id="Phone">
-                            <p id="p-msg"></p>
-                        </form>
-                    </div>
-                     <div class="ps-[20px]">
-                        <form action="#" method="get" class="flex flex-col">
-                            <label for="apply for" class="text-[#ffffff] font-medium text-[20px] capitalize ">Apply for</label>
-                            <select name="" id="" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] font-normal">
-                                <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                                      <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                                            <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                                                  <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
-                 <div class="grid grid-cols-2 flex mt-[42px] ">
-                    <div >
-                        <form action="#" method="get" class="flex flex-col">
-                            <label for="years of experience" class="text-[#ffffff] font-medium text-[20px] capitalize ">Years Of Experience</label>
-                            <select name="" id="" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] font-normal">
-                                <option value="medical" class="bg-[#3E3E3E]">none</option>
-                                      <option value="medical"  class="bg-[#3E3E3E]">BCA</option>
-                                            <option value="medical"  class="bg-[#3E3E3E]">BBA</option>
-                                                  <option value="medical"  class="bg-[#3E3E3E]">B-Tech</option>
-                            </select>
-                        </form>
-                    </div>
-                     <div class="ps-[20px]"> 
-                        <form action="#" method="get">
-                               <label for="username" class="text-[#ffffff] font-medium text-[20px] capitalize ">can we call you ?</label>
-                        </form>
-                      <div class="flex mt-[36px]">
-<form action="#" method="get">
-    <input type="radio" value="Acept with pleasure " name="accept" class="bg-transparent border-2 border-[#ffffff]">
-    <label for="accept" class="ps-[10px]  text-[#9E9C9C] font-['poppins-r'] text-[16px] font-normal">Acept with pleasure</label>
+  <section class="apply-for-job-form py-28">
+    <div class="container">
 
-                   
-    <input type="radio" value="reject_with_pleasure " name="accept" class="bg-transparent border-2 border-[#ffffff] ms-[25px]">
-    <label for="reject_with_pleasure" class="ps-[10px] text-[#9E9C9C] font-['poppins-r'] text-[16px] font-normal">Acept with pleasure</label>
-</form>  
+        <div class="w-full min-h-[934px] py-[68px] px-[44px] shadow-[10px_10px_15px_10px_#000000] hover:shadow-[5px_5px_28px_1px_#58CDFF] duration-1000">
+            <form action="#" method="post">
 
-</div>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-10">
+
+                    <!-- Username -->
+                    <div class="flex flex-col">
+                        <label for="username" class="text-white font-medium text-[20px] capitalize">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter Your Username"
+                            class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white"
+                        >
+                        <p id="u-msg"></p>
                     </div>
+
+                    <!-- Email -->
+                    <div class="flex flex-col">
+                        <label for="email" class="text-white font-medium text-[20px] capitalize">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Example@gmail.com"
+                            class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white"
+                        >
+                        <p id="e-msg"></p>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-white font-medium text-[20px]">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="Enter Your Phone Number"
+                            class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white " id="Phone"
+                        > 
+                        <p id="p-msg"></p>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-white font-medium text-[20px]">
+                            Apply For
+                        </label>
+
+                        <select class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white bg-[#3E3E3E]">
+                            <option value="">Medical</option>
+                            <option value="">Doctor</option>
+                            <option value="">Nurse</option>
+                        </select>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="flex flex-col">
+                        <label class="text-white font-medium text-[20px]">
+                            Years Of Experience
+                        </label>
+
+                        <select class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white bg-[#3E3E3E]">
+                            <option value="">None</option>
+                            <option value="">1 Year</option>
+                            <option value="">2 Years</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-white font-medium text-[20px]">
+                            Can We Call You?
+                        </label>
+
+                        <div class="flex items-center mt-[40px]">
+                            <input type="radio" name="call">
+
+                            <label class="ml-3 text-[#9E9C9C]">
+                                Accept with pleasure
+                            </label>
+
+                            <input type="radio" name="call" class="ml-6">
+
+                            <label class="ml-3 text-[#9E9C9C]">
+                                Accept with pleasure
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-white font-medium text-[20px]">
+                            Your Preferences
+                        </label>
+
+                        <select class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white bg-[#3E3E3E]">
+                            <option>Medical</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-white font-medium text-[20px]">
+                            Period Preferences
+                        </label>
+
+                        <select class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white bg-[#3E3E3E]">
+                            <option>Day Time Shift</option>
+                            <option>Night Time Shift</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-white font-medium text-[20px]">
+                            Interested In
+                        </label>
+
+                        <select class="rounded-[10px] border-2 border-white px-[38px] py-[29px] mt-[15px] text-white bg-[#3E3E3E]">
+                            <option>Full Time Job</option>
+                            <option>Part Time Job</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-white font-medium text-[20px]">
+                            Your Resume
+                        </label>
+
+                        <input
+                            type="file"
+                            class="mt-[25px] bg-[#d9d9d9] rounded-[10px] py-4 px-4"
+                        >
+                    </div>
+
                 </div>
-                        <div class="grid grid-cols-2 flex mt-[42px] ">
-                    <div >
-                         <form action="#" method="get" class="flex flex-col">
-                            <label for="apply for" class="text-[#ffffff] font-medium text-[20px] capitalize ">your preferences</label>
-                            <select name="" id="" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] font-normal">
-                                <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                                      <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                                            <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                                                  <option value="medical"  class="bg-[#3E3E3E]">medical</option>
-                            </select>
-                        </form>
-                    </div>
-                     <div class="ps-[20px]">
-                        <form action="#" method="get" class="flex flex-col">
-                            <label for="apply for" class="text-[#ffffff] font-medium text-[20px] capitalize ">period preferences</label>
-                            <select name="" id="" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] font-normal">
-                                <option value="medical"  class="bg-[#3E3E3E]">Day time Shift</option>
-                                      <option value="medical"  class="bg-[#3E3E3E]">Night time Shift</option>
-                                            
-                            </select>
-                        </form>
-                    </div>
+
+                <!-- Submit -->
+                <div class="flex justify-center mt-[50px]">
+                 <button type="button"
+   class="text-white capitalize cmn-btn inline-block bg-[#58CDEF] px-7 py-3 rounded-lg no-underline cursor-pointer"
+   onclick="saved_data() ">
+    Submit
+                </button>
                 </div>
-                 <div class="grid grid-cols-2 flex mt-[42px] ">
-                    <div >
-                         <form action="#" method="get" class="flex flex-col">
-                            <label for="apply for" class="text-[#ffffff] font-medium text-[20px] capitalize ">interested in</label>
-                            <select name="" id="" class="rounded-[10px] px-[38px] py-[29px] border-[#ffffff] border-2 capitalize text-[#ffffff] mt-[15px] font-normal">
-                                <option value="medical"  class="bg-[#3E3E3E]">Full time job</option>
-                                      <option value="medical"  class="bg-[#3E3E3E]">Part Time job</option>
-                                            <option value="medical"  class="bg-[#3E3E3E]">Hybrid</option>
-                                                  <option value="medical"  class="bg-[#3E3E3E]">work For Home</option>
-                            </select>
-                        </form>
-                    </div>
-                     <div class="ps-[20px]">
-                        <form action="#" method="get" class="flex flex-col">
-                            <label for="apply for" class="text-[#ffffff] font-medium text-[20px] capitalize ">your resume</label>
-                        <input type="file" name="" id="" class="py-[15px] px-[18px] bg-[#d9d9d9] rounded-[10px] mt-[29px] ">
-                        </form>
-                    </div>
-                </div>
-                  <button  type="button" class="cmn-btn inline-block bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg flex justify-center capitalize ms-[423px] mt-[49px] no-underline" onclick="saved_data()">
-                    submit
-                  </button>
-            </div> 
-            
+
+            </form>
+
         </div>
-    </section> 
+
+    </div>
+</section>
     <!-- footer -->
     <footer class="footer bg-[#222222] min-h-[493px]">
 <div class="container">
@@ -195,8 +266,8 @@
      </form>
 
         <!-- Button -->
-        <button
-            type="submit"
+        <a
+            href="#"
             class="w-[72px] h-[64px] bg-[#58CDFF] flex items-center justify-center  rounded-[10px] hover:bg-[#43c4fb] my-[6px] me-[8px]"
         >
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +280,7 @@
                       stroke-linejoin="round"
                       d="M5 12h14M13 5l7 7-7 7"/>
             </svg>
-        </button>
+        </a>
 
     </div>
 </div>
@@ -248,8 +319,7 @@
     </div>
 </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+   
     <script>
         
 // Form Validation
@@ -327,6 +397,34 @@ const saved_data = () => {
         document.getElementById("Phone").value = "";
     }
 };
+    </script>  
+    <script>
+
+    
+    const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
+
+menuBtn.onclick = () => {
+    mobileMenu.classList.remove("right-[-100%]");
+    mobileMenu.classList.add("right-0");
+
+    overlay.classList.remove("hidden");
+};
+
+closeBtn.onclick = closeMenu;
+overlay.onclick = closeMenu;
+
+function closeMenu() {
+    mobileMenu.classList.remove("right-0");
+    mobileMenu.classList.add("right-[-100%]");
+
+    overlay.classList.add("hidden");
+}
+
     </script>
+     
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
 </body>
 </html>
