@@ -30,7 +30,7 @@ var swiper = new Swiper(".mySwiper", {
 
     // 545px and up
     545: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
 
@@ -53,3 +53,5 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+
