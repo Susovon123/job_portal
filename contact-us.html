@@ -19,32 +19,70 @@
 </head>
 <body class="bg-[#3E3E3E]">
      <div class="about-us-banner relative min-h-[543px] bg-cover bg-no-repeat bg-center ">
-  <header class="absolute top-0 left-0 w-full z-10">
-        <div class="container">
-            <nav class="flex items-center justify-between mt-11">
-
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center ps-2 text-[#58CDFF] font-['rye-regular'] text-2xl">
+ <header class="absolute inset-0 w-full z-10">
+    
+<nav >
+    <div class="container flex items-center justify-between">
+        
+            <!-- Logo -->
+             <a href="index.html" class="flex items-center gap-2 text-[#58CDFF] font-['rye-regular'] text-2xl">
                     <img src="images/Group 5.png" alt="Logo">
                     Job Portal
                 </a>
 
-                      <!-- Navigation -->
-                <ul class="flex items-center  text-white text-base font-['poppins-r'] no-underline">
+              <!-- Navigation -->
+                <ul class="flex items-center  text-white text-base font-['poppins-r'] no-underline hidden lg:flex ">
                     <li><a href="index.html" class="hover:text-[#58CDFF]  me-12 no-underline">Home</a></li>
-                    <li><a href="#" class="hover:text-[#58CDFF] me-12 no-underline">Job List</a></li>
+                    <li><a href="job-list.html" class="hover:text-[#58CDFF] me-12 no-underline">Job List</a></li>
                     <li><a href="contact-us.html" class="hover:text-[#58CDFF] me-12 no-underline">Contact</a></li>
                     <li><a href="about-us.html" class="hover:text-[#58CDFF] me-12 no-underline ">Apply</a></li>
                 </ul>
-
-                <!-- Login Button -->
-                <a href="#" class="cmn-btn inline-block bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
+      <!-- Login Button -->
+            <a href="#" class="hidden lg:inline-block cmn-btn bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
                     Login
                 </a>
 
-            </nav>
-        </div>
-    </header>  
+            <!-- Mobile Toggle -->
+            <button id="menuBtn" class="lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+    </div>
+</nav>
+<div id="overlay"
+    class="fixed inset-0 bg-black/40 hidden z-40"></div>
+
+<!-- Mobile Sidebar -->
+<div id="mobileMenu"
+    class="fixed top-0 right-[-100%] w-72 min-h-screen bg-[#3E3E3E] shadow-xl transition-all duration-300 z-50">
+
+    <div class="flex justify-between items-center p-5 border-b">
+        <a href="index.html" class="flex items-center gap-2 text-[#58CDFF] font-['rye-regular'] text-2xl">
+                    <img src="images/Group 5.png" alt="Logo">
+                    Job Portal
+                </a>
+
+        <button id="closeBtn" class="text-3xl">&times;</button>
+    </div>
+
+<ul class="flex flex-col mt-8 items-center space-y-6 text-white text-base font-['poppins-r']">
+    <li><a href="index.html" class="hover:text-[#58CDFF] no-underline">Home</a></li>
+    <li><a href="job-list.html" class="hover:text-[#58CDFF] no-underline">Job List</a></li>
+    <li><a href="contact-us.html" class="hover:text-[#58CDFF] no-underline">Contact</a></li>
+    <li><a href="about-us.html" class="hover:text-[#58CDFF] no-underline">Apply</a></li>
+
+    <li class="pt-4">
+        <a href="#" class="cmn-btn inline-block bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
+            Login
+        </a>
+    </li>
+</ul>
+
+</div>
+   </header>
     <div class="absolute z-20 capitalize top-[138px] left-[403px]">
   <h1 class="text-[#ffffff] font-['Sansita-r'] text-[60px]  font-normal mx-[54px]"> Contact Us</h1> 
 <p class="text-center max-w-[530px] mx-auto text-white">
@@ -57,7 +95,7 @@
         <!-- contact us -->
 <section class="contact-us py-28">
     <div class="container">
-        <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 pt-[100px] ">
+        <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 pt-[100px] md:mt-[12px] sm:mt-[12px] ">
             <div >
 <h2 class="text-[#ffffff] font-['poppins-r'] font-semibold text-[32px] leading-[30px] capitalize">send us message</h2>
 <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1  "> 
@@ -68,12 +106,12 @@
     <input type="text" placeholder="frist name" class="py-[15px] px-[16px] border-[#9E9C9C] border-2 rounded-[5px] mt-[45px] text-[#9E9C9C] capitalize font-['poppins-r'] text-[16px] font-normal leading-[20px] ms-[20px] hover:shadow-[0_0_6px_3px_#58CDFF] duration-1000 cursor-pointer">
 </form>
 </div>
-<div class="grid grid-cols-1">
+<div class="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1  md:mt-[12px] sm:mt-[12px]">
     <form action="#" method="get">
     <input type="email" placeholder="enter your email" class="py-[15px] px-[16px] border-[#9E9C9C] border-2 rounded-[5px] mt-[45px] text-[#9E9C9C] capitalize font-['poppins-r'] text-[16px] font-normal leading-[20px] w-full  hover:shadow-[0_0_6px_3px_#58CDFF] duration-1000 cursor-pointer">
 </form> 
 </div> 
-<div class="grid grid-cols-1">
+<div class="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1  md:mt-[12px] sm:mt-[12px]">
     <form action="#" method="get">
     <textarea   class="py-[15px] px-[16px] border-[#9E9C9C] border-2 rounded-[5px] mt-[45px] text-[#9E9C9C] capitalize font-['poppins-r'] text-[16px] font-normal leading-[20px] w-full  hover:shadow-[0_0_6px_3px_#58CDFF] duration-1000 cursor-pointer"></textarea>
 </form>  
@@ -188,33 +226,33 @@
 </div>
         </div>
         <div class=" ms-[99px] mt-[55px]">
-            <ul class="list-none text-[#ffffff] hover: text-[#58CDFF] duration-700"> 
-                <li class="font-['poppins-r'] text-[20px] font-medium"><a href="#">About Us</a></li>
-                <li class="font-['poppins-r'] text-[16px] font-normal pt-[45px] leading-[25px]"><a href="#"> Careers</a></li>
-                <li class="font-['poppins-r'] text-[16px] font-normal leading-[25px] pt-[20px]"><a href="#"> our mission</a></li>
-                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px] "><a href="#"> how it started</a></li>
-                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#">sucesses</a></li>
+            <ul class="list-none "> 
+                <li class="font-['poppins-r'] text-[20px] font-medium"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">About Us</a></li>
+                <li class="font-['poppins-r'] text-[16px] font-normal pt-[45px] leading-[25px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700"> Careers</a></li>
+                <li class="font-['poppins-r'] text-[16px] font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700"> our mission</a></li>
+                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px] "><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700"> how it started</a></li>
+                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">sucesses</a></li>
 
             </ul>
         </div>
                <div class=" ms-[109px] mt-[55px]">
-            <ul class="list-none text-[#ffffff] hover: text-[#58CDFF] duration-700 "> 
-                <li class="font-['poppins-r'] text-[20px] font-medium"><a href="#">For Creative</a></li>
-                <li class="font-['poppins-r'] text-[16px]  font-normal pt-[45px] leading-[25px]"><a href="#">Explore positions</a></li>
-                <li class="font-['poppins-r'] text-[16px] font-normal leading-[25px] pt-[20px]"><a href="#">About suggestions</a></li>
-                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px] "><a href="#">How it works?</a></li>
-                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#">Getting started</a></li>
-    <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#">Wgich plan</a></li>
+            <ul class="list-none  "> 
+                <li class="font-['poppins-r'] text-[20px] font-medium"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">For Creative</a></li>
+                <li class="font-['poppins-r'] text-[16px]  font-normal pt-[45px] leading-[25px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">Explore positions</a></li>
+                <li class="font-['poppins-r'] text-[16px] font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">About suggestions</a></li>
+                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px] "><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">How it works?</a></li>
+                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">Getting started</a></li>
+    <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">Wgich plan</a></li>
             </ul>
         </div>
              <div class=" ms-[109px] mt-[55px]">
             <ul class="list-none text-[#ffffff] hover: text-[#58CDFF] duration-700"> 
                 <li class="font-['poppins-r'] text-[20px]  font-medium"><a href="#">Resource</a></li>
-                <li class="font-['poppins-r'] text-[16px] font-normal pt-[45px] leading-[25px]"><a href="#">Our Userbase</a></li>
-                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#">Why pick us?</a></li>
-                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px] "><a href="#"> How it works?</a></li>
-                <li class="font-['poppins-r'] text-[16px] font-normal leading-[25px] pt-[20px]"><a href="#">Getting Plan</a></li> 
-                   <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#">Wgich plan</a></li>
+                <li class="font-['poppins-r'] text-[16px] font-normal pt-[45px] leading-[25px] "><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">Our Userbase</a></li>
+                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">Why pick us?</a></li>
+                <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px] "><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700"> How it works?</a></li>
+                <li class="font-['poppins-r'] text-[16px] font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">Getting Plan</a></li> 
+                   <li class="font-['poppins-r'] text-[16px]  font-normal leading-[25px] pt-[20px]"><a href="#" class="text-[#ffffff] hover: text-[#58CDFF] duration-700">Wgich plan</a></li>
 
             </ul>
         </div>
@@ -228,5 +266,108 @@
     <!-- swiper js -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <script src="script.js"></script>
+    <script>
+        
+// Form Validation
+
+
+const saved_data = () => {
+
+    // Get input values
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("Phone").value.trim();
+
+    // Get message elements
+    const user_msg = document.getElementById("u-msg");
+    const email_msg = document.getElementById("e-msg");
+    const phone_msg = document.getElementById("p-msg");
+
+    // Clear previous messages
+    user_msg.innerHTML = "";
+    email_msg.innerHTML = "";
+    phone_msg.innerHTML = "";
+
+    // Message color
+    user_msg.style.color = "white";
+    email_msg.style.color = "white";
+    phone_msg.style.color = "white";
+
+    // Validation flag
+    let isValid = true;
+
+    // Regular Expressions
+    const username_regex = /^.{3,14}$/;
+    const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const phone_regex = /^[0-9]{10}$/;
+
+    // Username validation
+    if (username === "") {
+        user_msg.innerHTML = "Username is required";
+        isValid = false;
+    } else if (!username_regex.test(username)) {
+        user_msg.innerHTML = "Username must be 3-14 characters";
+        isValid = false;
+    }
+
+    // Email validation
+    if (email === "") {
+        email_msg.innerHTML = "Email is required";
+        isValid = false;
+    } else if (!email_regex.test(email)) {
+        email_msg.innerHTML = "Enter a valid email";
+        isValid = false;
+    }
+
+    // Phone validation
+    if (phone === "") {
+        phone_msg.innerHTML = "Phone number is required";
+        isValid = false;
+    } else if (!phone_regex.test(phone)) {
+        phone_msg.innerHTML = "Phone number must contain exactly 10 digits";
+        isValid = false;
+    }
+
+    // Store data
+    if (isValid) {
+
+        localStorage.setItem("Username", username);
+        localStorage.setItem("Email", email);
+        localStorage.setItem("Phone", phone);
+
+        alert("Data Stored Successfully");
+
+        // Clear inputs
+        document.getElementById("username").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("Phone").value = "";
+    }
+};
+    </script>  
+    <script>
+    
+    const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
+
+menuBtn.onclick = () => {
+    mobileMenu.classList.remove("right-[-100%]");
+    mobileMenu.classList.add("right-0");
+
+    overlay.classList.remove("hidden");
+};
+
+closeBtn.onclick = closeMenu;
+overlay.onclick = closeMenu;
+
+function closeMenu() {
+    mobileMenu.classList.remove("right-0");
+    mobileMenu.classList.add("right-[-100%]");
+
+    overlay.classList.add("hidden");
+}
+
+    </script>
 </body>
 </html>
