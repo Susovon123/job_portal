@@ -1,5 +1,4 @@
-
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 @font-face {
     font-family: "rye-regular";
     src: url("./fonts/Rye/Rye-Regular.ttf") format("truetype");
@@ -55,16 +54,27 @@
 .cmn-btn:hover {
     color: #fff;
 } 
+.banner-image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image img{
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+}
+
 .banner-image::after{
-    content: ""; 
-    position: absolute; 
-    z-index: -1; 
-    background-color: #58CDFF; 
-    border-radius: 100%;
-    width: 500px; 
-    height: 520px; 
-    top: 113px;
-    right: 0;
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:#58CDFF;
+    z-index:1;
 }
  
 /* banner-overlay */ 
@@ -117,6 +127,13 @@
     background: #58CDFF ;
 }
 
+
+
+
+
+
+
+
 @keyframes borderAnimation {
     0%   { clip-path: inset(0 100% 0 0); }
     34%  { clip-path: inset(0 0 100% 0); }
@@ -126,5 +143,562 @@
 }
 
 .animate-border:hover:before{
-    animation: borderAnimation 5s linear infinite;
+    animation: borderAnimation 1s linear infinite;
+}
+
+
+/* ===========================
+   1200px
+=========================== */
+@media (max-width:1200px){
+
+    .container{
+        max-width:960px;
+    }
+
+    .banner h1{
+        font-size:52px;
+        line-height:62px;
+    }
+
+    .banner-image::after{
+        width:430px;
+        height:450px;
+        top:100px;
+    }
+
+    .category{
+        max-width:100%;
+    } 
+     .subscribe-daily-update form{
+        width:650px;
+    }
+
+    .subscribe-daily-update h2{
+        font-size:36px;
+        line-height:42px;
+    }
+    .about-us-banner{
+        min-height:500px;
+    }
+
+    .about-us-banner h1{
+        font-size:52px;
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .about-us-banner .absolute.z-20{
+        left:50%;
+        transform:translateX(-50%);
+        text-align:center;
+        width:90%;
+    }
+     .swiper{
+        height:auto;
+    }
+
+    .swiper-pagination{
+        margin-top:70px;
+    }
+
+}
+
+
+/* ===========================
+   991px
+=========================== */
+@media (max-width:991px){
+
+    .banner .grid.grid-cols-2{
+        grid-template-columns:1fr;
+    }
+
+    .banner-image{
+        margin-top:50px;
+        text-align:center;
+    }
+
+    .banner-image img{
+        margin:0 auto;
+        width:80%;
+    }
+
+    .banner-image::after{
+        width:380px;
+        height:390px;
+        left:50%;
+        right:auto;
+        transform:translateX(-50%);
+        top:40px;
+    }
+
+    .banner h1{
+        font-size:45px;
+        line-height:55px;
+        text-align:center;
+    }
+
+    .banner p{
+        text-align:center;
+    }
+
+    .category{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .banner .px-\[92px\]{
+        padding-left:40px;
+        padding-right:40px;
+    }
+
+    .banner .py-\[21px\]{
+        padding-top:20px;
+        padding-bottom:20px;
+    } 
+
+    .subscribe-daily-update form{
+        width:90%;
+    }
+
+    .subscribe-daily-update h2{
+        max-width:500px;
+        font-size:34px;
+        line-height:40px;
+    }
+
+    .subscribe-daily-update .min-h-\[372px\]{
+        padding-bottom:40px;
+    } 
+
+
+
+    .about-us-banner{
+        min-height:470px;
+    }
+
+    .about-us-banner .absolute.z-20{
+        top:220px;
+        left:50%;
+        transform:translateX(-50%);
+        width:90%;
+    }
+
+    .about-us-banner h1{
+        font-size:44px;
+    }
+
+    .about-us-banner p{
+        max-width:500px;
+    }
+        .swiper{
+        height:auto;
+    }
+
+    .swiper-pagination{
+        margin-top:60px;
+    }
+}
+
+
+/* ===========================
+   780px
+=========================== */
+@media (max-width:780px){
+
+    .banner{
+        padding-top:70px;
+        padding-bottom:70px;
+    }
+
+    .banner h1{
+        font-size:38px;
+        line-height:48px;
+    }
+
+    .category{
+        height:auto;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+
+    .category .grid{
+        grid-template-columns:1fr;
+    }
+
+    .category .flex{
+        justify-content:center;
+        margin-bottom:18px;
+    }
+
+    .category a{
+        display:block;
+        width:220px;
+        margin:0 auto;
+        text-align:center;
+    }
+
+    .banner .lg\:grid-cols-3{
+        grid-template-columns:1fr;
+    }
+
+    .banner .circle{
+        margin-top:20px;
+    }
+
+    .banner-image img{
+        width:70%;
+    }
+
+    .banner-image::after{
+        width:320px;
+        height:330px;
+    } 
+        .subscribe-daily-update{
+        padding-top:70px;
+        padding-bottom:70px;
+    }
+
+    .subscribe-daily-update h2{
+        font-size:30px;
+        line-height:38px;
+        max-width:420px;
+    }
+
+    .subscribe-daily-update form{
+        width:90%;
+        min-height:60px;
+    }
+
+    .subscribe-daily-update input{
+        font-size:16px;
+    }
+
+
+    .about-us-banner{
+        min-height:430px;
+    }
+
+    .about-us-banner .absolute.z-20{
+        top:240px;
+    }
+
+    .about-us-banner h1{
+        font-size:36px;
+    }
+
+    .about-us-banner p{
+        font-size:15px;
+    }
+       .swiper{
+        height:auto;
+    }
+
+    .swiper-pagination{
+        margin-top:50px;
+    }
+}
+
+
+/* ===========================
+   545px
+=========================== */
+@media (max-width:545px){
+
+    .banner h1{
+        font-size:30px;
+        line-height:40px;
+    }
+
+    .banner p{
+        font-size:16px;
+    }
+
+    .category{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .category p{
+        font-size:14px;
+    }
+
+    .category select{
+        font-size:14px;
+    }
+
+    .banner .px-\[92px\]{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .banner .circle{
+        width:55px;
+        height:55px;
+    }
+
+    .banner-image img{
+        width:90%;
+    }
+
+    .banner-image::after{
+        width:260px;
+        height:270px;
+    }  
+        .subscribe-daily-update h2{
+        font-size:24px;
+        line-height:32px;
+        max-width:300px;
+    }
+
+    .subscribe-daily-update form{
+        display:block;
+        width:90%;
+        background:transparent;
+    }
+
+    .subscribe-daily-update input{
+        width:100%;
+        min-height:55px;
+        background:#E8E8E8;
+        border-radius:12px;
+        padding-left:18px;
+    }
+
+    .subscribe-daily-update a{
+        display:block;
+        width:100%;
+        text-align:center;
+        margin-top:15px;
+        padding-top:16px;
+        padding-bottom:16px;
+        border-radius:12px;
+    }
+
+    .subscribe-daily-update .min-h-\[372px\]{
+        padding-bottom:35px;
+    }
+
+
+    .about-us-banner{
+        min-height:500px;
+    }
+
+    .about-us-banner .absolute.z-20{
+        top:300px;
+        width:95%;
+    }
+
+    .about-us-banner h1{
+        font-size:30px;
+    }
+
+    .about-us-banner p{
+        font-size:14px;
+    }
+
+    .swiper{
+        height:auto;
+    }
+
+    .swiper-slide{
+        border-radius:8px;
+    }
+
+    .swiper-pagination{
+        margin-top:40px;
+    }
+}
+
+
+/* ===========================
+   440px
+=========================== */
+@media (max-width:440px){
+
+    .banner h1{
+        font-size:25px;
+        line-height:35px;
+    }
+
+    .category{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .category p{
+        font-size:13px;
+    }
+
+    .category a{
+        width:180px;
+        padding-top:12px;
+        padding-bottom:12px;
+        font-size:15px;
+    }
+
+    .banner .circle{
+        width:50px;
+        height:50px;
+        padding:10px;
+    }
+
+    .banner-image::after{
+        width:220px;
+        height:220px;
+    } 
+
+        .subscribe-daily-update h2{
+        font-size:22px;
+        line-height:30px;
+    }
+
+    .subscribe-daily-update input{
+        font-size:15px;
+    }
+
+    .subscribe-daily-update a{
+        font-size:15px;
+    }
+    .about-us-banner h1{
+        font-size:26px;
+    }
+
+    .about-us-banner p{
+        font-size:13px;
+    }
+
+    .about-us-banner .absolute.z-20{
+        top:320px;
+    }
+        .swiper{
+        height:auto;
+    }
+
+    .swiper-slide{
+        border-radius:8px;
+    }
+
+    .swiper-pagination{
+        margin-top:35px;
+    }
+
+  
+
+}
+
+
+/* ===========================
+   320px
+=========================== */
+@media (max-width:320px){
+
+    .banner{
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .banner h1{
+        font-size:22px;
+        line-height:30px;
+    }
+
+    .banner p{
+        font-size:14px;
+    }
+
+    .category{
+        padding-left:8px;
+        padding-right:8px;
+    }
+
+    .category p{
+        font-size:12px;
+    }
+
+    .category select{
+        font-size:12px;
+    }
+
+    .category a{
+        width:150px;
+        font-size:13px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    .banner .circle{
+        width:45px;
+        height:45px;
+        padding:8px;
+    }
+
+    .banner .circle svg{
+        width:22px;
+        height:22px;
+    }
+
+    .banner-image img{
+        width:100%;
+    }
+
+    .banner-image::after{
+        width:180px;
+        height:180px;
+    } 
+     .subscribe-daily-update{
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .subscribe-daily-update h2{
+        font-size:18px;
+        line-height:26px;
+        max-width:250px;
+    }
+
+    .subscribe-daily-update form{
+        width:95%;
+    }
+
+    .subscribe-daily-update input{
+        min-height:50px;
+        padding-left:12px;
+        font-size:14px;
+    }
+
+    .subscribe-daily-update a{
+        font-size:14px;
+        padding-top:14px;
+        padding-bottom:14px;
+    } 
+        .about-us-banner{
+        min-height:520px;
+    }
+
+    .about-us-banner .absolute.z-20{
+        top:340px;
+        width:96%;
+    }
+
+    .about-us-banner h1{
+        font-size:22px;
+    }
+
+    .about-us-banner p{
+        font-size:12px;
+    }
+       .swiper{
+        height:auto;
+    }
+
+    .swiper-slide{
+        border-radius:6px;
+    }
+
+    .swiper-pagination{
+        margin-top:30px;
+    }
+
 }
